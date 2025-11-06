@@ -3,12 +3,14 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
+import { Listing  } from "../types";
 import AddListingModal from "@/components/AddListingModal";
 
 export default function DashboardPage() {
   const router = useRouter();
   const [showAddListing, setShowAddListing] = useState(false);
-  const [listings, setListings] = useState([]);
+  const [listings, setListings] = useState<Listing[]>([]);
+
 
   const stats = [
     { title: "Total Revenue", value: "$24,580", change: "+12.5% vs last month", color: "green" },
@@ -167,10 +169,11 @@ export default function DashboardPage() {
        <AddListingModal
         isOpen={showAddListing}
         onClose={() => setShowAddListing(false)}
-        onAdded={(newItem) => {
-          setShowAddListing(false);
-          setListings((prev) => [...prev, newItem]);
-        }}
+            onAdded={(newItem: Listing) => {
+        setShowAddListing(false);
+        setListings((prev) => [...prev, newItem]);
+      }}
+
       />
     </div>
   );

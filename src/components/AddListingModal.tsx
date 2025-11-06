@@ -10,6 +10,7 @@ type AddListingModalProps = {
 };
 
 type Listing = {
+  id: string;
   name: string;
   price: string;
   category: string;
@@ -45,13 +46,15 @@ export default function AddListingModal({
     setLoading(true);
 
     setTimeout(() => {
-      const newItem: Listing = {
+   const newItem: Listing = {
+        id: Date.now().toString(),
         name,
         price,
         category,
         description,
         image: preview || "",
       };
+      onAdded?.(newItem);
 
       console.log("✅ Dummy item added:", newItem);
       alert("✅ Item added successfully (dummy mode)");
