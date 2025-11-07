@@ -42,14 +42,14 @@ export default function Header() {
           ) : (
             <>
               <Link
-                href="/marketplace"
-                className="px-6 py-2 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition"
+                href="/login"
+                className="px-6 py-2 text-teal-600 border-2 rounded-lg font-semibold  transition"
               >
                 Login
               </Link>
               <Link
                 href="/signup"
-                className="px-6 py-2 bg-teal-600 text-white rounded-lg font-semibold hover:bg-teal-700 transition"
+                className="px-6 py-3 bg-teal-600 text-white rounded-lg font-semibold hover:bg-teal-700 transition"
               >
                 Get Started
               </Link>
