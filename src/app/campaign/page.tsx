@@ -1,7 +1,15 @@
-"use client";
+import LinkPageForm from "@/components/LinkPageForm";
 
-import BusinessProfilePage from "@/components/BusinessProfilePage";
+export const metadata = {
+  title: "Share URL Link - Kasuwan Gizo",
+};
 
 export default function CampaignPage() {
-  return <BusinessProfilePage />;
+  return (
+    <main className="p-6">
+      <div className="max-w-6xl mx-auto">
+        <LinkPageForm />
+      </div>
+    </main>
+  );
 }
