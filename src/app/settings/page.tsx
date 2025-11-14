@@ -44,6 +44,71 @@ export default function SettingsPage() {
     setTimeout(() => setSaved(false), 3000);
   };
 
+  const iconComponents: { [key: string]: React.ReactNode } = {
+    profile: (
+      <svg className="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm0 2c2.667-1.333 4-3 4-6s-1.333-4.667-4-6c-2.667 1.333-4 3-4 6s1.333 4.667 4 6z" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 20h8c2.667-2 4-4 4-8s-1.333-6-4-8H8c-2.667 2-4 4-4 8s1.333 6 4 8z" />
+      </svg>
+    ),
+    password: (
+      <svg className="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 15v2m-6 4h12a2 2 0 0 0 2-2v-6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2zm3-10V7a3 3 0 0 1 6 0v2" />
+      </svg>
+    ),
+    avatar: (
+      <svg className="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 16l4.586-4.586a2 2 0 0 1 2.828 0l8.586 8.586V4H4v12zm0 0v4a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-4m-2.586-5.414a2 2 0 1 1 2.828-2.828 2 2 0 0 1-2.828 2.828z" />
+      </svg>
+    ),
+    "business-info": (
+      <svg className="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 21V5a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v16m14 0h2m-2 0h-5m-9 0H3m10-3.5v3.5m0-3.5v-8m0 8h5m0 0h2m-7-3h7" />
+      </svg>
+    ),
+    location: (
+      <svg className="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 0 1-2.827 0l-4.244-4.243a8 8 0 1 1 11.314 0z" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 11a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+      </svg>
+    ),
+    media: (
+      <svg className="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M7 21a4 4 0 0 1-4-4V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v12a4 4 0 0 1-4 4zm0 0h12a2 2 0 0 0 2-2v-4a2 2 0 0 0-2-2h-2.5a1 1 0 0 1-1-1V7a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1z" />
+      </svg>
+    ),
+    notifications: (
+      <svg className="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 17h5l-1.405-1.405A2.032 2.032 0 0 1 18 14.158V11a6.002 6.002 0 0 0-4-5.659V5a2 2 0 1 0-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 1 1-6 0v-1m6 0H9" />
+      </svg>
+    ),
+    email: (
+      <svg className="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 8l7.89 5.26a2 2 0 0 0 2.22 0L21 8M5 19h14a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2z" />
+      </svg>
+    ),
+    sms: (
+      <svg className="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 18h.01M8 21h8a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2z" />
+      </svg>
+    ),
+    privacy: (
+      <svg className="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 15v2m-6 4h12a2 2 0 0 0 2-2v-6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2zm3-10V7a3 3 0 0 1 6 0v2" />
+      </svg>
+    ),
+    data: (
+      <svg className="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M5 19a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h4l2 3h6a2 2 0 0 1 2 2v1M5 19h14a2 2 0 0 0 2-2v-5a2 2 0 0 0-2-2H9a2 2 0 0 0-2 2v5a2 2 0 0 1-2 2z" />
+      </svg>
+    ),
+    sessions: (
+      <svg className="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.75 17L9 20m0 0l-.75 3M9 20a3 3 0 1 1-6 0m6 0l-1.5-6m12.75-5.25A6.002 6.002 0 0 0 6 10.5m0 0a6 6 0 1 1 12 0" />
+      </svg>
+    ),
+  };
+
   const settingGroups = [
     {
       name: "Account & Profile",
@@ -51,21 +116,21 @@ export default function SettingsPage() {
       cards: [
         {
           id: "profile",
-          icon: "👤",
+          icon: "profile",
           title: "Personal Information",
           description: "Update your name, email, and phone number",
           status: "Active",
         },
         {
           id: "password",
-          icon: "🔐",
+          icon: "password",
           title: "Password & Security",
           description: "Change password, setup two-factor authentication",
           badge: "Last changed 3 months ago",
         },
         {
           id: "avatar",
-          icon: "🖼️",
+          icon: "avatar",
           title: "Profile Picture",
           description: "Upload or change your profile photo",
           status: "Set",
@@ -78,21 +143,21 @@ export default function SettingsPage() {
       cards: [
         {
           id: "business-info",
-          icon: "🏢",
+          icon: "business-info",
           title: "Business Information",
           description: "Manage business name, category, and details",
           status: "Configured",
         },
         {
           id: "location",
-          icon: "📍",
+          icon: "location",
           title: "Location & Website",
           description: "Set your business address and website URL",
           status: "Set",
         },
         {
           id: "media",
-          icon: "🎨",
+          icon: "media",
           title: "Branding Assets",
           description: "Upload logo, cover image, and brand photos",
           badge: "Logo pending",
@@ -105,21 +170,21 @@ export default function SettingsPage() {
       cards: [
         {
           id: "notifications",
-          icon: "🔔",
+          icon: "notifications",
           title: "Notification Preferences",
           description: "Choose how you want to receive updates",
           status: "Customized",
         },
         {
           id: "email",
-          icon: "📧",
+          icon: "email",
           title: "Email Settings",
           description: "Manage email frequency and content preferences",
           status: "Active",
         },
         {
           id: "sms",
-          icon: "📱",
+          icon: "sms",
           title: "SMS & Mobile Alerts",
           description: "Configure urgent notifications via SMS",
           status: preferences.smsAlerts ? "Enabled" : "Disabled",
@@ -132,21 +197,21 @@ export default function SettingsPage() {
       cards: [
         {
           id: "privacy",
-          icon: "🔒",
+          icon: "privacy",
           title: "Privacy Controls",
           description: "Manage what information is public",
           status: "Custom",
         },
         {
           id: "data",
-          icon: "💾",
+          icon: "data",
           title: "Data & Export",
           description: "Download your data or delete account",
           badge: "Last exported 2 weeks ago",
         },
         {
           id: "sessions",
-          icon: "🌐",
+          icon: "sessions",
           title: "Active Sessions",
           description: "View and manage your active sessions",
           status: "1 active",
@@ -189,7 +254,7 @@ export default function SettingsPage() {
                     className="setting-card group relative bg-white rounded-lg border border-gray-200 p-5 hover:shadow-lg hover:border-gray-300 transition cursor-pointer text-left"
                   >
                     <div className="flex items-start justify-between mb-3">
-                      <div className="text-3xl">{card.icon}</div>
+                      <div>{iconComponents[card.icon as string]}</div>
                       {card.status && (
                         <span className="text-xs font-medium px-2 py-1 bg-green-50 text-green-700 rounded-full">
                           {card.status}
