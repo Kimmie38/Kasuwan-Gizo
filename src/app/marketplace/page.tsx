@@ -428,10 +428,10 @@ const categories = ['All Categories', 'Fashion & Accessories', 'Food & Beverages
 export default function MarketplacePage() {
   return (
     <div className="w-full bg-white">
-      <section className="bg-gradient-to-r from-emerald-600 to-emerald-500 text-white py-16">
+      <section className="bg-gradient-to-r from-emerald-500 to-emerald-900 text-white py-16">
         <div className="max-w-7xl mx-auto px-6">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-3">Discover Amazing Products</h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-3 text-gray-200">Discover Amazing Products</h1>
             <p className="text-lg md:text-xl text-white/90 mb-8">Explore thousands of products from verified African businesses across different categories and locations</p>
             <div className="max-w-2xl mx-auto">
               <div className="flex items-center bg-white rounded-lg overflow-hidden shadow-sm">

@@ -145,25 +145,25 @@ export default function DashboardPage() {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-        <div className="bg-white border rounded-lg p-6 shadow-sm text-center">
-          <div className="w-12 h-12 rounded-full bg-gradient-to-r from-indigo-500 to-pink-500 mx-auto mb-3 flex items-center justify-center text-white">+</div>
+        <div className="bg-white border rounded-lg p-6 shadow-sm text-center "onClick={() => setShowAddListing(true)}>
+          <div className="w-12 h-12 rounded-full bg-gradient-to-r from-green-600 to-yellow-600 mx-auto mb-3 flex items-center justify-center text-white">+</div>
           <div className="font-semibold text-gray-700">Add New Product</div>
           <div className="text-sm text-gray-500 mb-4">Expand your inventory with new products</div>
-          <button className="px-4 py-2 bg-gradient-to-r from-indigo-500 to-pink-500 text-white rounded">Add Product</button>
+          <button className="px-4 py-2 bg-gradient-to-r from-green-600 to-yellow-600  hover:from-purple-700 hover:to-pink-700 text-white rounded">Add Product</button>
         </div>
 
         <div className="bg-white border rounded-lg p-6 shadow-sm text-center cursor-pointer hover:shadow-md transition-shadow" onClick={() => router.push('/campaign')}>
           <div className="w-12 h-12 rounded-full bg-green-500 mx-auto mb-3 flex items-center justify-center text-white">⚡</div>
           <div className="font-semibold text-gray-700">Share URL Link</div>
           <div className="text-sm text-gray-500 mb-4">Copy & Share Unique URL</div>
-          <button className="px-4 py-2 bg-gradient-to-r from-indigo-500 to-pink-500 text-white rounded">Start Campaign</button>
+          <button className="px-4 py-2 bg-gradient-to-r from-green-600 to-yellow-500 hover:from-purple-700 hover:to-pink-700 text-white rounded">Start Campaign</button>
         </div>
 
         <div className="bg-white border rounded-lg p-6 shadow-sm text-center">
           <div className="w-12 h-12 rounded-full bg-orange-500 mx-auto mb-3 flex items-center justify-center text-white">📊</div>
           <div className="font-semibold text-gray-700">View Analytics</div>
           <div className="text-sm text-gray-500 mb-4">Deep dive into your business metrics</div>
-          <button className="px-4 py-2 bg-gradient-to-r from-indigo-500 to-pink-500 text-white rounded">View Reports</button>
+          <button className="px-4 py-2 bg-gradient-to-r from-green-600 to-yellow-500 hover:from-purple-700 hover:to-pink-700 text-white rounded">View Reports</button>
         </div>
       </div>
        <AddListingModal

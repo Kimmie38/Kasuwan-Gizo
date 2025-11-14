@@ -9,7 +9,6 @@ export default function ProfilePage() {
           <p className="text-sm text-gray-500">Manage your business information and public profile</p>
         </div>
         <div>
-          <button className="px-4 py-2 bg-indigo-600 text-white rounded-lg shadow">Edit Profile</button>
         </div>
       </div>
       <div className="bg-white border rounded-lg overflow-hidden">

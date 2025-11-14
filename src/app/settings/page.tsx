@@ -96,7 +96,7 @@ export default function SettingsPage() {
                         </svg>
                       </div>
                       <div>
-                        <div className="text-sm font-semibold">Light Mode</div>
+                        <div className="text-sm font-semibold text-gray-700">Light Mode</div>
                         <div className="text-xs text-gray-500">Clean and bright interface</div>
                       </div>
                     </button>
@@ -115,7 +115,7 @@ export default function SettingsPage() {
                         </svg>
                       </div>
                       <div>
-                        <div className="text-sm font-semibold">Dark Mode</div>
+                        <div className="text-sm font-semibold text-gray-700">Dark Mode</div>
                         <div className="text-xs text-gray-500">Easy on the eyes</div>
                       </div>
                     </button>
@@ -127,7 +127,7 @@ export default function SettingsPage() {
                   <div className="space-y-2">
                     <a href="#" className="block p-4 bg-white border border-gray-200 rounded-md hover:bg-gray-50 flex items-center justify-between">
                       <div>
-                        <div className="text-sm font-medium">Change Password</div>
+                        <div className="text-sm font-medium text-gray-700">Change Password</div>
                         <div className="text-xs text-gray-500">Update your account password</div>
                       </div>
                       <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -137,7 +137,7 @@ export default function SettingsPage() {
 
                     <a href="#" className="block p-4 bg-white border border-gray-200 rounded-md hover:bg-gray-50 flex items-center justify-between">
                       <div>
-                        <div className="text-sm font-medium">Export Data</div>
+                        <div className="text-sm font-medium text-gray-700">Export Data</div>
                         <div className="text-xs text-gray-500">Download your account data</div>
                       </div>
                       <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">

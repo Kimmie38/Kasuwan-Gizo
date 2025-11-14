@@ -104,14 +104,6 @@ export default function ProductsPage() {
             >
               <div className="text-xs text-yellow-500">1</div>
             </Card>
-
-            <Card
-              title="Total Sales"
-              value={<span className="text-purple-500">$642</span>}
-              icon={kpiIcon()}
-            >
-              <div className="text-xs text-purple-500">642</div>
-            </Card>
           </div>
 
       <div className="flex flex-col md:flex-row items-center gap-4">
