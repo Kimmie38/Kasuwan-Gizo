@@ -79,7 +79,7 @@ export default function CTASection() {
         >
           <Link
             href="/signup"
-            className="inline-block px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-bold rounded-full text-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
+            className="inline-block px-8 py-4 bg-gradient-to-r from-green-600 to-yellow-500 hover:from-purple-700 hover:to-pink-700 text-white font-bold rounded-full text-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
           >
             Start Your Transformation →
           </Link>

@@ -55,7 +55,7 @@ export default function Sidebar() {
             const classes =
               `group flex items-center gap-3 px-4 py-3 rounded-lg text-sm font-medium transition-colors ` +
               (isActive
-                ? "bg-gradient-to-r from-indigo-500 to-pink-500 text-white shadow-sm"
+                ? "bg-gradient-to-r from-green-600 to-yellow-500 hover:from-purple-700 hover:to-pink-700 text-white shadow-sm"
                 : "text-gray-700 hover:bg-gray-50");
 
             return (
@@ -69,7 +69,7 @@ export default function Sidebar() {
                   </a>
                 ) : (
                   <Link href={item.href} className={classes}>
-                    <span className="w-5 h-5 text-gray-500 group-hover:text-gray-700 flex items-center justify-center">
+                    <span className="w-6 h-6 text-gray-500 group-hover:text-gray-700 flex items-center justify-center">
                       {getIcon(item.icon)}
                     </span>
                     <span className="flex-1">{item.label}</span>

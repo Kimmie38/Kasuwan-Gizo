@@ -46,8 +46,7 @@ export default function NotificationsPage() {
           <p className="text-sm text-gray-500">Stay updated with your business activities</p>
         </div>
         <div className="flex items-center gap-3">
-          <button className="px-4 py-2 border rounded text-sm">Mark All Read</button>
-          <button className="px-4 py-2 bg-indigo-600 text-white rounded text-sm">Settings</button>
+          <button className="px-4 py-2 border rounded text-sm text-gray-700">Mark All Read</button>
         </div>
       </div>
 
